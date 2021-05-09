@@ -41,9 +41,15 @@ io.on('connection', async (clientSocket) => {
     // }
   });
 
+/*
+*
+PROBLEM:  Why wont's the terminalSocket connect?  Why the 503 error?
+*
+*/
+
 
   // clientSocket is for communication between browser and proxy
-  clientSocket.on('client_message', (msg) => {
+  cl/ientSocket.on('client_message', (msg) => {
     // pass allong the message from the browser
     terminalSocket.emit('client_message', msg); 
   });
